@@ -1,3 +1,5 @@
+/* Geral */
+
 *{
     margin: 0;
     padding: 0;
@@ -24,7 +26,10 @@ div img{
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
 }
+
+/* Header */
 
 header{
     display: flex;
@@ -49,6 +54,8 @@ header .list-items{
 header .menu{
     justify-content: space-between;
 }
+
+/* Apresentação */
 
 .apresentacao{
     height: 100vh;
@@ -80,6 +87,8 @@ header .menu{
     text-decoration: none;
 }
 
+/* Quem somos */
+
 #quem-somos{
     flex-direction: row-reverse;
     align-items: center;
@@ -110,6 +119,8 @@ header .menu{
 #quem-somos img{
     min-width: 420px;
 }
+
+/* Serviços */
 
 .container-externo{
     background-color: #122A57;
@@ -163,6 +174,8 @@ header .menu{
     width: 80%;
     margin: auto
 }
+
+/* Planos */
 
 #planos{
     flex-direction: column;
@@ -229,4 +242,66 @@ header .menu{
     height: 10px;
     background-color: #122A57;
     margin-right: 5px;
+}
+
+/* Footer */
+
+footer{
+    background-color: #122A57;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer{
+    justify-content: space-between;
+    color: #fff;
+}
+
+/* Mobile/responsividade */
+
+@media(max-width: 992px){
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao .texto-apresentacao{
+        min-height: 200px;
+        width: 100%;
+    }
+
+    #quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos img{
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos{
+        flex-direction: column;
+    }
+
+    .item-servico img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .list-planos{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .list-planos .item-plano{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
